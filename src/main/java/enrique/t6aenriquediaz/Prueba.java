@@ -60,7 +60,10 @@ public class Prueba {
             System.out.println("------------------------");
         }
         
+        // ESte método sería polimorfico ya que según si se ejecuta con un parametro o sin el da un resultado
         a1.descansar();
+        a2.descansar(14);
+        System.out.println("");
         
         System.out.println(listaAnimales.indexOf(fm3));
         System.out.println(listaAnimales.contains(a2));// Al no haberse añadido a la lista indica flase por su ausencia en listaAnimales

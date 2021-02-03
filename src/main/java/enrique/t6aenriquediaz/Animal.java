@@ -114,6 +114,7 @@ public class Animal {
         setEstadoAnimal(1);
     }
 
+    // Estos método son polimorficos ya que según si se ejecuta con un parametro o sin el da un resultado
     public void descansar() {
         System.out.println("El animal se encuentra descansando");
         setEstadoAnimal(2);
