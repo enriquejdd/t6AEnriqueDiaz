@@ -93,28 +93,28 @@ public class FelisMargarita extends Felino {
     }
     
     @Override
-    public void cazar(Animal e) {
-        super.cazar(e);
+    public void cazar() {
+        super.cazar();
         System.out.println("El Gato del desierto se encuentra cazando");
-        e.setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
+        setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
     }
     
-    public void esperarNoche(Felino e){
-        if(e.isEsNocturno()){
+    public void esperarNoche(){
+        if(isEsNocturno()){
             System.out.println("El gato del desierto esperará hasta la noche para poder cazar más facil mente.");
-            e.setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
+            setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
         }
         else{
-            e.cazar(e);
+            cazar();
         }
         
     }
     
     @Override
-    public void dormir(Animal e){
-        super.dormir(e);
+    public void dormir(){
+        super.dormir();
         System.out.println("El felino se encuentra descansando");
-        e.setEstadoAnimal(2); // 1- Cazando, 2- Descansando, 3-Jugando
+        setEstadoAnimal(2); // 1- Cazando, 2- Descansando, 3-Jugando
     }
     
     

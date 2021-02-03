@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Prueba {
 
     public static void main(String[] args) {
-        Animal a1 = new Animal("Felino", true, 7, 3);
+        Animal a1 = new Animal("Perro", true, 7, 3);
         Animal a2 = new Animal();
 
         // Conversiones implícitas
@@ -51,17 +51,25 @@ public class Prueba {
                 ((Felino) aux).crecer(16);
             }
             if (aux instanceof FelisMargarita) {
-                ((FelisMargarita) aux).esperarNoche(fm2);
+                ((FelisMargarita) aux).esperarNoche();
             }
             if (aux instanceof FelisSilvestrisCatus) {
-                ((FelisSilvestrisCatus) aux).dormir(fsc1);
+                ((FelisSilvestrisCatus) aux).dormir();
             }
-            aux.cazar(aux);
+            aux.cazar();
             System.out.println("------------------------");
         }
         
+        a1.descansar();
+        
         System.out.println(listaAnimales.indexOf(fm3));
-        System.out.println(listaAnimales.contains(a2));
-        System.out.println(listaAnimales.remove(a2));
+        System.out.println(listaAnimales.contains(a2));// Al no haberse añadido a la lista indica flase por su ausencia en listaAnimales
+        System.out.println(listaAnimales.contains(f2));// En este caso el animal si se encuentra y da true
+        listaAnimales.remove(fsc2);
+        
+        for (Animal aux : listaAnimales) {            
+            System.out.println(aux);
+            System.out.println("------------------------");
+        }
     }
 }

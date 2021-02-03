@@ -95,21 +95,21 @@ public class Felino extends Animal {
 
     public void crecer(int tamanioACrecer) {
         if (tamanioACrecer > 0) {
-            tamanio += tamanioACrecer;
+            setTamanio(tamanio + tamanioACrecer);
             System.out.println("El peso del Felino ahora es: " + tamanio);
         }
     }
     
-    public void dormir(Animal e){
+    public void dormir(){
         System.out.println("El felino se encuentra descansando");
-        e.setEstadoAnimal(2); // 1- Cazando, 2- Descansando, 3-Jugando
+        setEstadoAnimal(2); // 1- Cazando, 2- Descansando, 3-Jugando
     }
 
     @Override
-    public void cazar(Animal e) {
-        super.cazar(e);
+    public void cazar() {
+        super.cazar();
         System.out.println("El felino se encuentra cazando");
-        e.setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
+        setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
     }
 
 }

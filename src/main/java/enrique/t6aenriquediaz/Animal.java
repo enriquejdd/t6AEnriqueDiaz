@@ -109,18 +109,18 @@ public class Animal {
         return true;
     }
 
-    public void cazar(Animal e) {
+    public void cazar() {
         System.out.println("El animal se encuentra cazando");
-        e.setEstadoAnimal(1);
+        setEstadoAnimal(1);
     }
 
-    public void descansar(Animal e) {
+    public void descansar() {
         System.out.println("El animal se encuentra descansando");
-        e.setEstadoAnimal(2);
+        setEstadoAnimal(2);
     }
 
-    public void descansar(Animal e, int tiempo) {
-        e.setEstadoAnimal(2);
+    public void descansar(int tiempo) {
+        setEstadoAnimal(2);
         System.out.println("El animal va ha descansar durante " + tiempo + " horas");
     }
 
