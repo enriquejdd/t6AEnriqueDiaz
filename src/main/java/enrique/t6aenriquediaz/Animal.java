@@ -13,14 +13,13 @@ import java.util.Objects;
  */
 public class Animal {
 
-    private String tamanio;
     private String tipoAnimal;
     private boolean esSigiloso;
     private int subgénero;
     private int estadoAnimal; // 1- Cazando, 2- Descansando, 3-Jugando
 
-    public Animal(String tamanio, String tipoAnimal, boolean esSigiloso, int subgénero, int estadoAnimal) {
-        this.tamanio = tamanio;
+    public Animal(String tipoAnimal, boolean esSigiloso, int subgénero, int estadoAnimal) {
+
         this.tipoAnimal = tipoAnimal;
         this.esSigiloso = esSigiloso;
         this.subgénero = subgénero;
@@ -28,19 +27,11 @@ public class Animal {
     }
 
     public Animal() {
-        this.tamanio = "Pequeño";
+
         this.tipoAnimal = "Felino";
         this.esSigiloso = true;
         this.subgénero = 4;
         this.estadoAnimal = 2;
-    }
-
-    public String getTamanio() {
-        return tamanio;
-    }
-
-    public void setTamanio(String tamanio) {
-        this.tamanio = tamanio;
     }
 
     public String getTipoAnimal() {
@@ -77,13 +68,13 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" + "tamanio=" + tamanio + ", tipoAnimal=" + tipoAnimal + ", esSigiloso=" + esSigiloso + ", subg\u00e9nero=" + subgénero + ", estadoAnimal=" + estadoAnimal + '}';
+        return "Animal{" + ", tipoAnimal=" + tipoAnimal + ", esSigiloso=" + esSigiloso + ", subg\u00e9nero=" + subgénero + ", estadoAnimal=" + estadoAnimal + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.tamanio);
+
         hash = 71 * hash + Objects.hashCode(this.tipoAnimal);
         hash = 71 * hash + (this.esSigiloso ? 1 : 0);
         hash = 71 * hash + this.subgénero;
@@ -112,30 +103,25 @@ public class Animal {
         if (this.estadoAnimal != other.estadoAnimal) {
             return false;
         }
-        if (!Objects.equals(this.tamanio, other.tamanio)) {
-            return false;
-        }
         if (!Objects.equals(this.tipoAnimal, other.tipoAnimal)) {
             return false;
         }
         return true;
     }
-    
-    public void cazar(Animal e){
+
+    public void cazar(Animal e) {
         System.out.println("El animal se encuentra cazando");
         e.setEstadoAnimal(1);
     }
-    
-    public void descansar(Animal e){
+
+    public void descansar(Animal e) {
         System.out.println("El animal se encuentra descansando");
         e.setEstadoAnimal(2);
     }
-    
-    public void descansar(Animal e, int tiempo){
-        e.setEstadoAnimal(2);
-        System.out.println("El animal va ha descansar durante " + tiempo + " horas");        
-    }
-    
 
+    public void descansar(Animal e, int tiempo) {
+        e.setEstadoAnimal(2);
+        System.out.println("El animal va ha descansar durante " + tiempo + " horas");
+    }
 
 }
