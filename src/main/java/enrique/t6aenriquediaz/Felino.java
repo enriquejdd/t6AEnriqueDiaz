@@ -26,7 +26,7 @@ public class Felino extends Animal {
 
     public Felino() {
         super();
-        this.origen = "Felidae";
+        this.origen = "Europa";
         this.esNocturno = true;
         this.tamanio = 30;
     }
