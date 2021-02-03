@@ -97,12 +97,12 @@ public class FelisSilvestrisCatus extends Felino {
     public void cazar(Animal e) {
         super.cazar(e);
         System.out.println("El gato doméstico se encuentra cazando");
-        e.setEstadoAnimal(1);
+        e.setEstadoAnimal(1); // 1- Cazando, 2- Descansando, 3-Jugando
     }
     
     public void jugarConDueño(Animal e){
         System.out.println("El gato doméstico se encuentra jugando con su dueño");
-        e.setEstadoAnimal(3);
+        e.setEstadoAnimal(3); // 1- Cazando, 2- Descansando, 3-Jugando
     }
 
 }
