@@ -31,5 +31,14 @@ public class Prueba {
         System.out.println(fsc2.toString());
         
         ArrayList<Animal> listaAnimales = new ArrayList<>();
+        listaAnimales.add(a1);
+        listaAnimales.add(f1);
+        listaAnimales.add(f2);
+        listaAnimales.add(f3);
+        listaAnimales.add(fm1);
+        listaAnimales.add(fm2);
+        listaAnimales.add(fsc1);
+        listaAnimales.add(fsc2);
+        listaAnimales.add(fsc3);
     }
 }
