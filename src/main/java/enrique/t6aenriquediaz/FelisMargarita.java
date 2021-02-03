@@ -5,6 +5,8 @@
  */
 package enrique.t6aenriquediaz;
 
+import java.util.Objects;
+
 /**
  *
  * @author Enrique
@@ -50,6 +52,44 @@ public class FelisMargarita extends Felino {
 
     public void setEsAlbino(boolean esAlbino) {
         this.esAlbino = esAlbino;
+    }
+
+    @Override
+    public String toString() {
+        return "FelisMargarita{" + "color=" + color + ", peso=" + peso + ", esAlbino=" + esAlbino + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 11 * hash + Objects.hashCode(this.color);
+        hash = 11 * hash + this.peso;
+        hash = 11 * hash + (this.esAlbino ? 1 : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final FelisMargarita other = (FelisMargarita) obj;
+        if (this.peso != other.peso) {
+            return false;
+        }
+        if (this.esAlbino != other.esAlbino) {
+            return false;
+        }
+        if (!Objects.equals(this.color, other.color)) {
+            return false;
+        }
+        return true;
     }
     
     
