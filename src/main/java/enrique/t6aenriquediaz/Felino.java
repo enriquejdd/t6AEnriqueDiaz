@@ -12,6 +12,7 @@ import java.util.Objects;
  * @author Enrique
  */
 public class Felino extends Animal {
+
     private String origen;
     private boolean esNocturno;
     private String tamanio;
@@ -25,7 +26,7 @@ public class Felino extends Animal {
 
     public Felino() {
     }
-    
+
     public String getTamanio() {
         return tamanio;
     }
@@ -87,15 +88,19 @@ public class Felino extends Animal {
         }
         return true;
     }
-    
+
+    public void crecer(int tamanioACrecer) {
+        if (tamanioACrecer > 0) {
+            tamanio += tamanioACrecer;
+            System.out.println("El peso del Felino ahora es: " + tamanio);
+        }
+    }
+
     @Override
     public void cazar(Animal e) {
         super.cazar(e);
         System.out.println("El felino se encuentra cazando");
         e.setEstadoAnimal(1);
     }
-    
-    
-    
-    
+
 }
