@@ -92,5 +92,17 @@ public class FelisSilvestrisCatus extends Felino {
         }
         return true;
     }
+    
+    @Override
+    public void cazar(Animal e) {
+        super.cazar(e);
+        System.out.println("El gato doméstico se encuentra cazando");
+        e.setEstadoAnimal(1);
+    }
+    
+    public void jugarConDueño(Animal e){
+        System.out.println("El gato doméstico se encuentra jugando con su dueño");
+        e.setEstadoAnimal(3);
+    }
 
 }
