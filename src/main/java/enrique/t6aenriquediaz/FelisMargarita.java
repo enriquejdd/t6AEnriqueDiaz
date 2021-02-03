@@ -110,6 +110,13 @@ public class FelisMargarita extends Felino {
         
     }
     
+    @Override
+    public void dormir(Animal e){
+        super.dormir(e);
+        System.out.println("El felino se encuentra descansando");
+        e.setEstadoAnimal(2); // 1- Cazando, 2- Descansando, 3-Jugando
+    }
+    
     
     
     

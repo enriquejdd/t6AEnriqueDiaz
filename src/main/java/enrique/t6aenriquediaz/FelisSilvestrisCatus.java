@@ -104,5 +104,12 @@ public class FelisSilvestrisCatus extends Felino {
         System.out.println("El gato doméstico se encuentra jugando con su dueño");
         e.setEstadoAnimal(3); // 1- Cazando, 2- Descansando, 3-Jugando
     }
+    
+    @Override
+    public void dormir(Animal e){
+        super.dormir(e);
+        System.out.println("El felino se encuentra descansando");
+        e.setEstadoAnimal(2); // 1- Cazando, 2- Descansando, 3-Jugando
+    }
 
 }
