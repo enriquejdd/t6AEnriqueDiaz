@@ -95,13 +95,13 @@ public class FelisMargarita extends Felino {
     @Override
     public void cazar(Animal e) {
         super.cazar(e);
-        System.out.println("El felino se encuentra cazando");
+        System.out.println("El Gato del desierto se encuentra cazando");
         e.setEstadoAnimal(1);
     }
     
     public void esperarNoche(Felino e){
         if(e.isEsNocturno()){
-            System.out.println("El animal esperará hasta la noche para poder cazar más facil mente.");
+            System.out.println("El gato del desierto esperará hasta la noche para poder cazar más facil mente.");
             e.setEstadoAnimal(1);
         }
         else{
