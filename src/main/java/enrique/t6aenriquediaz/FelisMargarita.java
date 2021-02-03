@@ -56,7 +56,7 @@ public class FelisMargarita extends Felino {
 
     @Override
     public String toString() {
-        return "FelisMargarita{" + "color=" + color + ", peso=" + peso + ", esAlbino=" + esAlbino + '}';
+        return super.toString() + "FelisMargarita{" + "color=" + color + ", peso=" + peso + ", esAlbino=" + esAlbino + '}';
     }
 
     @Override
