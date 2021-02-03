@@ -15,9 +15,9 @@ public class Felino extends Animal {
 
     private String origen;
     private boolean esNocturno;
-    private String tamanio;
+    private int tamanio;
 
-    public Felino(String origen, boolean esNocturno, String tamanio, String tipoAnimal, boolean esSigiloso, int subgénero, int estadoAnimal) {
+    public Felino(String origen, boolean esNocturno, int tamanio, String tipoAnimal, boolean esSigiloso, int subgénero, int estadoAnimal) {
         super(tipoAnimal, esSigiloso, subgénero, estadoAnimal);
         this.origen = origen;
         this.esNocturno = esNocturno;
@@ -25,13 +25,17 @@ public class Felino extends Animal {
     }
 
     public Felino() {
+        super();
+        this.origen = "Felidae";
+        this.esNocturno = true;
+        this.tamanio = 30;
     }
 
-    public String getTamanio() {
+    public int getTamanio() {
         return tamanio;
     }
 
-    public void setTamanio(String tamanio) {
+    public void setTamanio(int tamanio) {
         this.tamanio = tamanio;
     }
 
